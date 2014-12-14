@@ -1,0 +1,175 @@
+1. why do we need data structure? 
+Data structure is a particular way of storing and organizing information  in a computer  so that it can be retrieved and used most productively.
+Different kinds of data structures are meant  for different kinds of applications, and some are highly specialized to specific tasks.
+Data structures are important for the following reasons:
+1. Data structures are used in almost every program or software system.
+2. Specific data structures are essential ingredients of many efficient algorithms, and make possible the management of huge amounts of data, such as large integrated collection of databases.
+3. Some programming languages emphasize data structures, rather than algorithms, as the key organizing factor in software design.
+2) List out the areas in which data structures are applied extensively?
+Answer:  Following are few areas where data structure applied-
+	   1.Compiler Design,
+	   2.Operating System,
+	   3.Database Management System,
+	   4.Statistical analysis package,
+	   5.Numerical Analysis,
+	   6.Graphics,
+               7.Artificial Intelligence,
+               8.Simulation
+3) what is an Array?
+An array is a container object that holds a fixed number of values of a single type. The length of an array is established when the array is created. After creation, its length is fixed. An example of arrays :
+ 
+An array of 10 elements.
+
+Each item in an array is called an element, and each element is accessed by its numerical index. As shown in the preceding illustration, numbering begins with 0. The 9th element, for example, would therefore be accessed at index 8.
+First and Major difference between Array and Array List in Java Array is the one which can save similar data typed elements, and the size is fixed. Array list is a collection which is capable of saving different data typed objects, and is grow able.
+
+
+
+
+
+   
+
+
+Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case. Reason is same as explained for remove.
+Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence the memory consumption is high in LinkedList comparatively.
+array list is a collection which is capable of saving different data typed objects, and is growable.
+5) what is LinkedList?
+Linked list is a dynamic data structure whose length can be increased or decreased at run time.
+		Linked list basically consists of memory blocks that are located at random memory locations. 	
+		Linked lists are a way to store data with structures so that the programmer can automatically create a new place to store data whenever necessary.
+		
+6. what is queue?
+A Queue is a collection for holding elements prior to processing. Besides basic Collection operations, queues provide additional insertion, removal, and inspection operations.  The rule used for a queue is first-in-first-out or FIFO.The Queue interface follows.
+public interface Queue<E> extends Collection<E> {
+    E element();
+    boolean offer(E e);
+    E peek();
+    E poll();
+    E remove();
+}
+what is stack?
+A stack is a data structure used to store a collection of objects. Individual items can be added and stored in a stack using a push operation. Objects can be retrieved using a pop operation, which removes an item from the stack. The rule used for a queue is Last-in-first-out or LIFO.
+8) what is FIFO and LIFO?
+FIFO=First in First out and 
+LIFO=Last in First out
+
+	   
+
+ 
+9) what is the order of complexity?
+Answer: Generally, an algorithm has an asymptotic computational complexity. Assuming the input is
+of size N, we can say that the algorithm will finish at O(N), O(N^2), O(N^3), O(N*log(N)) 
+
+
+ complexity of the program's underlying algorithm, the faster it will run and the better
+ it will scale as the input gets larger. Thus, we should often seek more efficient algorithms in order to reduce the order of complexity.
+
+10)what is the best case to search an element from an array?
+Answer: In the best case analysis, we calculate lower bound on running time of an algorithm. We 
+must know the case that causes minimum number of operations to be executed. In the linear
+search problem, the best case occurs when x is present at the first location. The number
+of operations in worst case is constant (not dependent on n). So time complexity in the
+best case would be O(1).
+
+11)what is the worst case to search an element from an array?
+Answer: In the worst case analysis, we calculate upper bound on running time of an algorithm. We
+must know the case that causes maximum number of operations to be executed. For Linear Search,
+ the worst case happens when the element to be searched (x in the above code) is not present 
+in the array. When x is not present, the search() functions compares it with all the elements
+ of arr[] one by one. Therefore, the worst case time complexity of linear search would be 
+ O(n).
+      
+12) what is tree in data structure?
+Answer: A Tree is an ideal data structure  for representing some kind of hierarchical data. There
+are  many types of tree in data structures- General Tree, Binary Trees, Expression Tree, tournament tree, Binary search tree, Threaded Tree, AVL Tree and B-Tree.
+
+A general Tree T is defined as a finite set of elements, called nodes and the remaining elements, if any are partition into trees,
+which are called the sub tree of T.
+	  		 
+
+13) what is graph in data structure?
+Answer: A graph is a data structure which is collection of vertex and edges, G=(V,E) where V is set of vertices and E is set of edges is defined as  
+ pair of vertices, which are adjacent to0 each other.  
+
+14) what is the difference between the HashTable and HashMap?
+Answer:1.HashMap is non-synchronized whereas Hashtable is synchronized.
+	   2.HashMap allows null values as key and value whereas Hashtable doesn’t allow nulls.
+	   3.Iterator in the HashMap is a fail-fast iterator while the enumerator for the Hashtable is not and throw ConcurrentModificationException if any other Thread 
+	     modifies the map structurally by adding or removing any element except Iterator’s own 
+	     remove() method.
+	   4.Because of thread-safety and synchronization Hashtable is much slower than HashMap,
+	     if used in Single threaded environment.
+	   5.HashMap does not guarantee that the order of the map will remain constant over time.
+	     
+15) What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+Answer:	RDBMS = Array (i.e. Array of structures)
+    	Network data model = Graph
+16) How HashMap works in java?
+Answer:
+HashMap works on principle of hashing, we have put(key, value) and get(key) method for storing and retrieving Objects from HashMap. When we pass Key and Value object to put() method on Java HashMap, HashMap implementation calls hashCode method on Key object and applies returned hashcode into its own hashing function to find a bucket location for storing Entry object, important point to mention is that HashMap in Java stores both key and value object as Map.Entry in bucket.
+17) What is Big-(O)-notation?
+Big O notation is used in Computer Science to describe the performance or complexity of an algorithm.
+18) Outlined different kind of sorting algorithm with time complexity?
+Answer:
+Insertion, bubble, merge, quick, radix. 
+19) Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
+  a)In terms of adding element.
+  b)In terms of removing element.
+  c)In terms of searching element.
+ 
+Answer:
+	Arrays:
+    Inserting: O(1) for all the positions, since it is done with indexes
+    Deleting: O(n) if we have to find the element, O(1) if we know position of the element
+    Searching: O(n) if array is unsorted and O(log n) if array is sorted and something like a binary search is used.
+	Advantages:Quick insertion, very fast access if index known.
+	Disadvantages:Slow search,slow deletion,fixed size.
+	
+	
+	Linked List:
+    Inserting: O(1), if done at the head, O(n) if anywhere else since we have to reach that position by traveseing the linkedlist linearly.
+    Deleting: O(1), if done at the head, O(n) if anywhere else since we have to reach that position by traveseing the linkedlist linearly.
+    Searching: O(n)
+    Advantages:Quick insertion, quick deletion.
+	Disadvantages:Slow search.
+    
+
+	Doubly-Linked List:
+    Inserting: O(1), if done at the head, O(n) if anywhere else since we have to reach that position by traveseing the linkedlist linearly.
+    Deleting: O(1), if done at the head, O(n) if anywhere else since we have to reach that position by traveseing the linkedlist linearly.
+    Searching: O(n)
+    Advantages:Quick insertion, quick deletion.
+	Disadvantages:Slow search.
+
+	Stack:
+    Push: O(1)   Pop: O(1)   Top: O(1)
+    Search (Something like lookup, as a special operation): O(n) (I guess so)
+    Advantages:Provides last-in, first-out access.
+	Disadvantages:Slow access to other items.
+
+	Queue/Deque/Circular Queue:
+    Insert: O(1)   Remove: O(1)   Size: O(1)
+    Advantages:Provides first-in, first-out access.
+	Disadvantages:Slow access to other items.
+
+	Binary Search Tree:
+    Insert, delete and search: Average case: O(log n), Worst Case: O(n)
+    Advantages:Quick search, insertion, deletion (if tree remains balanced).
+    Disadvantages:Deletion algorithm is complex.
+
+	Heap/PriorityQueue (min/max):
+	findMin/findMax: O(1)
+	insert: O(log n)    deleteMin/Max: O(log n)  lookup, delete (if at all provided): O(n), we will have to scan all the elements as they are not ordered like BST
+	Advantages:Fast insertion, deletion, access to largest item.
+	Disadvantages:Slow access to other items.
+
+	HashMap/Hashtable/HashSet:		
+
+    Insert/Delete: O(1) amortized
+    Re-size/hash: O(n)
+	Advantages:tableVery fast access if key known. Fast insertion.
+	Disadvantages:Slow deletion, access slow if key not known, inefficient memory usage.
+
+
+
+
